@@ -1,0 +1,13 @@
+{
+  "name": "pluralsight-node-express",
+  "version": "1.0.0",
+  "description": "Web App Course with node and express",
+  "main": "server.js",
+  "repository": "https://github.com/yagosenhorini/pluralsight-node",
+  "author": "Yago Senhorini",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "express": "^4.16.3"
+  }
+}
