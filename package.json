@@ -3,13 +3,34 @@
   "version": "1.0.0",
   "description": "Web App Course with node and express",
   "main": "server.js",
+  "scripts": {
+    "start": "DEBUG=* nodemon server.js",
+    "lint": "eslint server.js"
+  },
   "repository": "https://github.com/yagosenhorini/pluralsight-node",
   "author": "Yago Senhorini",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.1.1",
     "chalk": "^2.4.1",
     "debug": "^2.6.6",
     "express": "^4.16.3",
+    "jquery": "^3.3.1",
     "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "nodemon": "^1.17.5"
+  },
+  "nodemonConfig":{
+    "restartable": "rs",
+    "ignore": ["node_modules/**/node_modules"],
+    "delay": "2500",
+    "env":{
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
   }
 }

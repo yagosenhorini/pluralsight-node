@@ -1,20 +1,19 @@
-var express = require('express');
-var chalk = require('chalk');
-var debug = require('debug')('app');
-var morgan = require('morgan');
-var path = require('path');
+const express = require('express');
+const chalk = require('chalk');
+const debug = require('debug')('app');
+const morgan = require('morgan');
+const path = require('path');
 
-var app = express();
+const app = express();
+let port = process.env.PORT || 3000;
 
-app.use(morgan('combined'));
+app.use(morgan('tiny'));
 
-app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname, 'views/index.html'));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 
-port = process.env.PORT || 3000;
-
-app.listen(port, ()=>{
-    debug(`Library App listening the port ${chalk.green(port)}`);
-    console.log(`Library App listening the port ${chalk.green(port)}`);
+app.listen(port, () => {
+  debug(`Library App listening the port ${chalk.green(port)}`);
+  console.log(`Library App listening the port ${chalk.green(port)}`);
 });
