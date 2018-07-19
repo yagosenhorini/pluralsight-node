@@ -2,10 +2,10 @@
   "name": "pluralsight-node-express",
   "version": "1.0.0",
   "description": "Web App Course with node and express",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "DEBUG=* nodemon server.js",
-    "lint": "eslint server.js"
+    "start": "DEBUG=app:* nodemon app.js",
+    "lint": "eslint app.js"
   },
   "repository": "https://github.com/yagosenhorini/pluralsight-node",
   "author": "Yago Senhorini",
@@ -16,7 +16,8 @@
     "debug": "^2.6.6",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "mssql": "^4.1.0"
   },
   "devDependencies": {
     "ejs": "^2.6.1",
